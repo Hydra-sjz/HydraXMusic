@@ -27,7 +27,7 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/songdownload_group")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/songdownload_group")
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5124507794").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "784589736 2021523124").split()))
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "180")) 
