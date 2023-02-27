@@ -12,7 +12,7 @@ import aiohttp
 import requests
 import wget
 import yt_dlp
-from pyrogram import Client, filters
+from pyrogram import filters
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Message
 from youtube_search import YoutubeSearch
@@ -20,7 +20,7 @@ from yt_dlp import YoutubeDL
 
 
 from data.decorators import humanbytes
-
+from AnonX import app
 
 
 ydl_opts = {
@@ -33,7 +33,7 @@ ydl_opts = {
 }
 
 
-@Client.on_message(filters.group & filters.text)
+@app.on_message(filters.group & filters.text)
 def song_dlrs(_, message):
     query=message.text
     print(query)
@@ -215,7 +215,7 @@ def time_to_seconds(times):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(filters.private & filters.group & filters.command(["vs"]))
+@app.on_message(filters.private & filters.group & filters.command(["vs"]))
 async def vsong_dlr(client, message):
     ydl_opts = {
         "format": "best",
