@@ -48,7 +48,7 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("DevilsHeavenMF")
+                await self.one.join_chat("songdownload_group")
                 await self.one.join_chat("FallenAssociation")
             except:
                 pass
@@ -79,7 +79,7 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("DevilsHeavenMF")
+                await self.two.join_chat("songdownload_group")
                 await self.two.join_chat("FallenAssociation")
             except:
                 pass
@@ -110,7 +110,7 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("DevilsHeavenMF")
+                await self.three.join_chat("songdownload_group")
                 await self.three.join_chat("FallenAssociation")
             except:
                 pass
@@ -141,8 +141,8 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("DevilsHeavenMF")
-                await self.four.join_chat("FallenAssociation")
+                await self.four.join_chat("songdownload_group")
+                await self.four.join_chat("songdownload_group")
             except:
                 pass
             assistants.append(4)
