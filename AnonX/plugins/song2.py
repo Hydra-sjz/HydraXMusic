@@ -262,7 +262,7 @@ async def vsong_dlr(client, message):
         print(e)
 
 
-@Client.on_message(command(["ly"]))
+@Client.on_message(filters.command(["ly"]))
 async def lyrc_dlr(_, message):
     try:
         if len(message.command) < 2:
