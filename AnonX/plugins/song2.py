@@ -215,7 +215,7 @@ def time_to_seconds(times):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(filters.command(["vs"]))
+@Client.on_message(filters.private & filters.group & filters.command(["vs"]))
 async def vsong_dlr(client, message):
     ydl_opts = {
         "format": "best",
@@ -262,7 +262,7 @@ async def vsong_dlr(client, message):
         print(e)
 
 
-@Client.on_message(filters.command(["ly"]))
+@Client.on_message(filters.private & filters.group & filters.command (["ly"]))
 async def lyrc_dlr(_, message):
     try:
         if len(message.command) < 2:
